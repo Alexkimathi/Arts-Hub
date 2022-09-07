@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "./Navbar";
+<<<<<<< HEAD
+=======
+import '../App.css';
+import { Link } from "react-router-dom";
+
+>>>>>>> 1a0bbb9660070e89a4ae91a15faec06101948e5f
 
 function Allarts() {
   const [arts, setarts] = useState([]);
@@ -20,11 +26,20 @@ function Allarts() {
       });
   };
   return (
+<<<<<<< HEAD
     <div>
     <Navbar />
     
       <div className="art-container">
 
+=======
+  
+
+    <div>
+    <Navbar />
+      <div className="art-container">
+   
+>>>>>>> 1a0bbb9660070e89a4ae91a15faec06101948e5f
         {arts.map((art) => (
           <div className="art-dets" key={art.id}>
           <div className="art-image">
@@ -36,12 +51,16 @@ function Allarts() {
               <div className="det">
               <h3>Contact:  {art.contact}</h3>
               </div>
-              <button className="btn-view">View Art</button>
+              <Link to={`/artsdetails/${art.id}`}><button className="btn-view">View Art</button></Link>
             </div>
           </div>
         ))}
       </div>
       </div>
+
+
+      </div>
+   
 
   );
 }
