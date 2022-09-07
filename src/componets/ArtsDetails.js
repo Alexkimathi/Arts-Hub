@@ -38,6 +38,7 @@ function ArtsDetails() {
        <h2>Title:{art.title}</h2>
        <h3>Author:{art.author}</h3>
        <h4>Author:{art.description}</h4>
+       
      </div>
    </div>
   )
