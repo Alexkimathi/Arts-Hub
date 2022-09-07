@@ -4,6 +4,7 @@ import Allarts from './componets/Allarts';
 
 
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import ArtsDetails from './componets/ArtsDetails';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
     <Routes>
         <Route path="/" element={<Allarts />} />
         <Route path="/allarts" element={<Allarts />} />
+        <Route path="/artsdetails/:artId" element={<ArtsDetails />} />
 
     </Routes>
 </Router>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "./Navbar";
 import '../App.css';
+import { Link } from "react-router-dom";
 
 
 function Allarts() {
@@ -39,7 +40,7 @@ function Allarts() {
               <div className="det">
               <h3>Contact:  {art.contact}</h3>
               </div>
-              <button className="btn-view">View Art</button>
+              <Link to={`/artsdetails/${art.id}`}><button className="btn-view">View Art</button></Link>
             </div>
           </div>
         ))}
