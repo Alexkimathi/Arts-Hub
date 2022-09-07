@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Navbar from "./Navbar";
 
 function Allarts() {
   const [arts, setarts] = useState([]);
@@ -19,8 +20,11 @@ function Allarts() {
       });
   };
   return (
+    <div>
+    <Navbar />
     
       <div className="art-container">
+
         {arts.map((art) => (
           <div className="art-dets" key={art.id}>
           <div className="art-image">
@@ -36,6 +40,7 @@ function Allarts() {
             </div>
           </div>
         ))}
+      </div>
       </div>
 
   );
