@@ -68,10 +68,6 @@ img{
   font-size: 2rem;
 }
 
-<<<<<<< HEAD
-
-/* navbar */
-=======
 /* end of allarts */
 
 
@@ -125,7 +121,6 @@ img{
 
 
 /* start of navbar */
->>>>>>> 1a0bbb9660070e89a4ae91a15faec06101948e5f
 
 .nav{
   background-color: #333;
@@ -135,10 +130,7 @@ img{
   align-items: stretch;
   gap: 2rem;
   padding: 0 2rem;
-<<<<<<< HEAD
-=======
   border-radius: 1rem;
->>>>>>> 1a0bbb9660070e89a4ae91a15faec06101948e5f
 }
 .site-title{
   font-size: 2.5rem;
@@ -149,10 +141,7 @@ img{
   list-style: none;
   display: flex;
   gap: 1rem;
-<<<<<<< HEAD
-=======
   font-size: 2rem;
->>>>>>> 1a0bbb9660070e89a4ae91a15faec06101948e5f
 }
 .nav a {
   color: inherit;
@@ -172,9 +161,6 @@ img{
 }
 
 
-<<<<<<< HEAD
 /* end navbar */
-=======
 
 /* end of navbar */
->>>>>>> 1a0bbb9660070e89a4ae91a15faec06101948e5f
