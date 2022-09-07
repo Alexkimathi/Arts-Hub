@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {useParams} from 'react-router-dom'
 import axios from "axios";
+import Navbar from './Navbar';
 
 
 function ArtsDetails() {
@@ -30,16 +31,22 @@ function ArtsDetails() {
     console.log("params", params)
   }, [params])
   return (
-   art && <div className="art-dets-1" key={art.id}>
+    <div>
+    <Navbar />
+    
+   <div className="art-dets-1" key={art.id}>
    <div className="art-image-1">
          <img src={art.image_url} alt="article url" />
        </div>
      <div className="art-det-1">
        <h2>Title:{art.title}</h2>
        <h3>Author:{art.author}</h3>
-       <h4>Author:{art.description}</h4>
+       <h3>contact:{art.contact}</h3>
+       <h4>{art.description}</h4>
+
        
      </div>
+   </div>
    </div>
   )
 }
