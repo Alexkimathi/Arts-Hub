@@ -1,0 +1,67 @@
+.form {
+  padding: 1rem;
+}
+html {
+  font-size: 62.5%;
+}
+
+
+.control {
+  margin-bottom: 0.8rem;
+}
+
+.control label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  margin-left: 2rem;
+  
+}
+
+.control input,
+.control textarea {
+  display: block;
+  font: inherit;
+  border-radius: 1rem;
+  border: .3rem solid #ccc;
+  padding: 1rem;
+  margin-left: 2rem;
+  width: 90%;
+
+}
+
+.actions {
+  margin-top: 1rem;
+  text-align: right;
+
+}
+ h1 {
+  font-size: 4rem;
+  padding-left: 40rem;
+  padding-top: 5rem;
+}
+.heading{
+  align-items: center;
+}
+
+.actions button {
+  font: inherit;
+  cursor: pointer;
+  background-color: #77002e;
+  color: white;
+  border: 1rem solid #77002e;
+  border-radius: 1rem;
+  font-weight: bold;
+  padding: .1rem;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+
+}
+
+.actions button:hover,
+.actions button:active {
+  background-color: #a50e48;
+  border-color: #a50e48;
+}

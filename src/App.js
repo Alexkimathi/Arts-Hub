@@ -5,6 +5,7 @@ import Allarts from './componets/Allarts';
 
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import ArtsDetails from './componets/ArtsDetails';
+import NewArtsForm from './componets/NewArtsForm';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Allarts />} />
         <Route path="/allarts" element={<Allarts />} />
         <Route path="/artsdetails/:artId" element={<ArtsDetails />} />
+        <Route path="/newartsform" element={<NewArtsForm />} />
 
     </Routes>
 </Router>

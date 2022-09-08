@@ -13,7 +13,7 @@ function Navbar() {
         <NavLink to={"/allarts"} exact="true">
           AllArts
         </NavLink>
-        <NavLink to={"/allarts"} exact="true">
+        <NavLink to={"/newartsform"} exact="true">
           NewArts
         </NavLink>
       
