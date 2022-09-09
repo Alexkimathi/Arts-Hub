@@ -4,7 +4,6 @@ import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 
 function Allarts() {
-
   const [arts, setArt] = useState([]);
 
   useEffect(() => {
@@ -30,32 +29,29 @@ function Allarts() {
   // };
   return (
     <div>
-    <Navbar />
-    
-      <div className="art-container">
+      <Navbar />
 
+      <div className="art-container">
         {arts.map((art) => (
           <div className="art-dets" key={art.id}>
-          <div className="art-image">
-                <img src={art.image_url} alt="article url" />
-              </div>
+            <div className="art-image">
+              <img src={art.image_url} alt="article url" />
+            </div>
             <div className="art-det">
               <h2>Title:{art.title}</h2>
+              <h4>{art.created_at}</h4>
               <h3>Author:{art.author}</h3>
               <div className="det">
-              <h3>Contact:  {art.contact}</h3>
+                <h3>Contact: {art.contact}</h3>
               </div>
-              <Link to={`/artsdetails/${art.id}`}><button className="btn-view">View Art</button></Link>
+              <Link to={`/artsdetails/${art.id}`}>
+                <button className="btn-view">View Art</button>
+              </Link>
             </div>
           </div>
         ))}
       </div>
-      </div>
-
-
-    
-   
-
+    </div>
   );
 }
 

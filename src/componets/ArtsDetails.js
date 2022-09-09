@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from 'react'
-import {useParams} from 'react-router-dom'
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
-import Navbar from './Navbar';
+import Navbar from "./Navbar";
 import { useNavigate } from "react-router-dom";
-
-
+import { Link } from "react-router-dom";
 
 function ArtsDetails() {
-  const params =useParams()
+  const params = useParams();
 
   const [art, setArt] = useState([]);
 
@@ -16,10 +15,6 @@ function ArtsDetails() {
       .then((response) => response.json())
       .then((data) => setArt(data));
   }, []);
-
-
-
-
 
   // const [art, setarts] = useState([]);
   // useEffect(() => {
@@ -37,46 +32,49 @@ function ArtsDetails() {
   //       console.log(err);
   //     });
   // };
-  
 
-
-  React.useEffect(()=>{
-    console.log("params", params)
-  }, [params])
-
+  React.useEffect(() => {
+    console.log("params", params);
+  }, [params]);
 
   const history = useNavigate();
-  const handleDelete =()=>{
-    fetch('http://localhost:9292/arts/'+ art.id,{
-      method: 'DELETE'
-    }).then(()=>{
+  const handleDelete = () => {
+    fetch("http://localhost:9292/arts/" + art.id, {
+      method: "DELETE",
+    }).then(() => {
       history("/");
-    })
-  }
-
-
+    });
+  };
 
   return (
     <div>
-    <Navbar />
-    
-   <div className="art-dets-1" key={art.id}>
-   <div className="art-image-1">
-         <img src={art.image_url} alt="article url" />
-       </div>
-     <div className="art-det-1">
-       <h2>Title:{art.title}</h2>
-       <h3>Author:{art.author}</h3>
-       <h3>contact:{art.contact}</h3>
-       <h4>{art.description}</h4>
-     </div>
+      <Navbar />
+      <div className="det-container">
 
-     <div className='btn'>
-     <button onClick={handleDelete}>Delete</button>
-     </div>
-   </div>
-   </div>
-  )
+      <div className="art-dets-1" key={art.id}>
+        <div className="art-image-1">
+          <img src={art.image_url} alt="article url" />
+        </div>
+        <div className="art-det-1">
+          <h2>Title:{art.title}</h2>
+          <h3>Author:{art.author}</h3>
+          <h3>contact:{art.contact}</h3>
+          <h4>{art.description}</h4>
+        </div>
+
+        <div className="btn">
+          <button className="btn-view" onClick={handleDelete}>Delete</button>
+          <Link to={`/reviews/${art.id}`}>
+            <button className="btn-view">Review</button>
+          </Link>
+          <Link to={`/edits/${art.id}`}>
+            <button className="btn-view">Edit</button>
+          </Link>
+        </div>
+      </div>
+      </div>
+    </div>
+  );
 }
 
-export default ArtsDetails
+export default ArtsDetails;

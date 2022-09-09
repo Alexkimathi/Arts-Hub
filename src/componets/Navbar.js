@@ -6,7 +6,7 @@ function Navbar() {
     <nav className="nav">
       <div className="site-title">
         <NavLink to={"/allarts"} exact="true">
-          ArtCalleryWebApp
+          Art-Hub
         </NavLink>
       </div>
       <ul>
