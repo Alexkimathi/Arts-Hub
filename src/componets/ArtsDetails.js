@@ -57,6 +57,7 @@ function ArtsDetails() {
         </div>
         <div className="art-det-1">
           <h2>Title:{art.title}</h2>
+          <h4>{art.created_at}</h4>
           <h3>Author:{art.author}</h3>
           <h3>contact:{art.contact}</h3>
           <h4>{art.description}</h4>
@@ -67,9 +68,7 @@ function ArtsDetails() {
           <Link to={`/reviews/${art.id}`}>
             <button className="btn-view">Review</button>
           </Link>
-          <Link to={`/edits/${art.id}`}>
-            <button className="btn-view">Edit</button>
-          </Link>
+        
         </div>
       </div>
       </div>

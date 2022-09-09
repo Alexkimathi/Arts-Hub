@@ -174,4 +174,45 @@ img{
 
 /* end navbar */
 
-/* end of navbar */
+/* start of review */
+input{
+  padding: 2rem;
+  border-radius: 1rem;
+  font-size: 2rem;
+  display:block;
+  margin: 1rem;
+  
+}
+.rating{
+  font-size: 2rem;
+  margin: 1rem;
+}
+label{
+  font-size: 2rem;
+}
+form > h2{
+  font-size: 4rem;
+  margin-bottom: 3rem;
+  padding-left: 5rem;
+  
+}
+.card{
+  display: inline-block;
+  background-color: grey;
+  padding: 5rem;
+  margin-top: 10rem;
+  border-radius: 1rem;
+
+}
+.review{
+  padding-left: 50rem;
+}
+.btn-view-1{
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 2rem;
+  font-size: 2rem;
+}
+
+/* end of review */
